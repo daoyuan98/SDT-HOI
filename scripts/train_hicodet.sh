@@ -1,0 +1,17 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py \
+    --world-size 4 \
+    --batch-size 4  \
+    --weight-decay 1e-4 \
+    --num-workers 4 \
+    --encoder_layer 4 \
+    --comp_layer 3 \
+    --score_thres 0.2 \
+    --k 10 \
+    --epochs 200 \
+    --lr-drop 10 \
+    --lr-head 2e-4 \
+    --lr-decay 1.0 \
+    --seed 66 \
+    --print-interval 200 \
+    --pretrained pretrained_models/detr/detr-r50-hicodet.pth \
+    --output-dir checkpoints/SDT_hico
